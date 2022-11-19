@@ -1,2 +1,2 @@
-export * from './components/helloWorld/index'
+export * from './components/hello-world/index'
 
