@@ -3,28 +3,29 @@ export const BasicSignUpInputs = [
 		name: "username",
 		type: "text",
 		placeholder: "Username",
-        errorMessage: "Username should be atlesat 3-16 chracters and shouldn't include any specail characters!",
-        pattern: new RegExp(/^[a-zA-Z0-9]{3,16}$/)
+		errorMessage:
+			"Username should be atlesat 3-16 chracters and shouldn't include any specail characters!",
+		pattern: new RegExp(/^[a-zA-Z0-9]{3,16}$/),
 	},
 	{
 		name: "email",
 		type: "text",
 		placeholder: "Email",
-        errorMessage: "Should be a valid email address!",
-        pattern: new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+		errorMessage: "Should be a valid email address!",
+		pattern: new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
 	},
 	{
 		name: "password",
 		type: "password",
 		placeholder: "Password",
-        errorMessage: "Password should be 8-20 characters and include atleast 1 letter, 1 number!",
-        pattern: new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)
+		errorMessage: "Password should be 8-20 characters and include atleast 1 letter, 1 number!",
+		pattern: new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
 	},
 	{
 		name: "confirmPassword",
 		type: "password",
 		placeholder: "Confirm Password",
-        errorMessage: "Passwords don't match!",
+		errorMessage: "Passwords don't match!",
 	},
 ] as const;
 

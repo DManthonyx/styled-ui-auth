@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Span } from './styles';
+import { Span } from "./styles";
 
 interface PassedProps {
 	type?: "text" | "password";
@@ -8,23 +8,24 @@ interface PassedProps {
 	placeholder: string;
 	name: string;
 	onChange: (e: React.ChangeEvent) => void;
-    isError: boolean;
-    errorMessage: string;
+	isError: boolean;
+	errorMessage: string;
+	pattern?: string;
 }
 
 function FormInput(props: PassedProps) {
-	const { type = "text", onChange, errorMessage, placeholder, name, value, isError = false } = props;
+	const { onChange, errorMessage, isError = false, pattern, ...rest } = props;
 
-    const onChangeHandler = (e) => {
-        onChange(e)
-    } 
-    console.log(isError, '<-----')
+	const onChangeHandler = (e) => {
+		onChange(e);
+	};
+
 	return (
-        <div>
-            <input type={type} onChange={onChangeHandler} placeholder={placeholder} value={value} name={name} />
-            <Span isError={isError}>{errorMessage}</Span>
-        </div>
-    )
+		<div>
+			<input {...rest} onChange={onChangeHandler} />
+			<Span isError={isError}>{errorMessage}</Span>
+		</div>
+	);
 }
 
 export { FormInput };
