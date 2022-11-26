@@ -33,6 +33,7 @@
 		"@types/react": "^18.0.25",
 		"@typescript-eslint/eslint-plugin": "^5.43.0",
 		"babel-loader": "^8.3.0",
+		"dotenv": "^16.0.3",
 		"eslint": "^8.27.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
@@ -53,5 +54,9 @@
 	},
 	"peerDependencies": {
 		"styled-components": "^5.3.6"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"firebase": "^9.14.0"
 	}
 }
