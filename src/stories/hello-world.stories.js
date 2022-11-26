@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from "@storybook/react";
 
-import { HelloWorld } from '../components/hello-world';
+import { HelloWorld } from "../components/hello-world";
 
-const stories = storiesOf('Hello world', module);
+const stories = storiesOf("Hello world", module);
 
 stories.add("Hello world", () => {
-    return (<HelloWorld />)
+	return <HelloWorld />;
 });
